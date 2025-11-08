@@ -93,24 +93,22 @@ Index: main or kali_logs
 
 Click Next → Review → Submit
 
+               this are query of splunk now give readme file content for github
+
 8. Verify & Analyze Logs with SPL Queries
-A — Show Failed and Accepted Logins
-index=kali_logs sourcetype=sshlogs ("Failed password" OR "Accepted password")
-| table _time host user src_ip port _raw
-| sort 0 _time
+source="ssh log.txt" host="DESKTOP-R8E33U0" index="sshlogs" sourcetype="sshlogs" failed_password="*" src_ip="10.64.85.128"
 
 B — Recent Failed Attempts
-index=kali_logs sourcetype=sshlogs "Failed password" earliest=-1h
-| rex "from (?<src_ip>\\d+\\.\\d+\\.\\d+\\.\\d+)"
-| stats count AS failures by src_ip, user
-| sort - failures
+source="ssh log.txt" host="DESKTOP-R8E33U0" index="sshlogs" sourcetype="sshlogs" failed_password="Failed password" 
 
 C — Accepted Logins Only
-index=kali_logs sourcetype=sshlogs "Accepted password" earliest=-1h
-| table _time host user src_ip port _raw
+index="sshlogs" failed_password="Accepted password"
 
-D — Failed vs Accepted Timeline
-index=kali_logs sourcetype=sshlogs ("Failed password" OR "Accepted password") earliest=-1h
-| rex "for (?<user>\\S+) from (?<src_ip>\\d+\\.\\d+\\.\\d+\\.\\d+) port (?<port>\\d+)"
-| eval status = if(match(_raw,"(?i)Failed password"),"failed","accepted")
-| timechart span=1m count by status
+D — Failed with ip address
+source="ssh log.txt" host="DESKTOP-R8E33U0" index="sshlogs" sourcetype="sshlogs" failed_password="Failed password" src_ip="10.64.85.128"
+e. count number of accepted passwoord with ip address
+index="sshlogs" failed_password="Accepted password" src_ip="10.64.85.128" | stats count by src_ip
+
+f.count number of  failed password  with ip address
+index="sshlogs" failed_password="failed password" src_ip="10.64.85.128" | stats count by src_ip 
+
