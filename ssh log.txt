@@ -1,0 +1,48 @@
+Nov 07 11:21:52 kali systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Nov 07 11:21:52 kali sshd[711]: Server listening on 0.0.0.0 port 22.
+Nov 07 11:21:52 kali sshd[711]: Server listening on :: port 22.
+Nov 07 11:21:52 kali systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Nov 07 11:45:13 kali sshd-session[1638]: Invalid user sitaram from 10.64.85.128 port 53287
+Nov 07 11:45:19 kali sshd-session[1638]: pam_unix(sshd:auth): check pass; user unknown
+Nov 07 11:45:19 kali sshd-session[1638]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.64.85.128
+Nov 07 11:45:19 kali sshd-session[1638]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:45:19 kali sshd-session[1638]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:45:21 kali sshd-session[1638]: Failed password for invalid user sitaram from 10.64.85.128 port 53287 ssh2
+Nov 07 11:45:40 kali sshd-session[1638]: pam_unix(sshd:auth): check pass; user unknown
+Nov 07 11:45:40 kali sshd-session[1638]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:45:40 kali sshd-session[1638]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:45:42 kali sshd-session[1638]: Failed password for invalid user sitaram from 10.64.85.128 port 53287 ssh2
+Nov 07 11:45:51 kali sshd-session[1638]: pam_unix(sshd:auth): check pass; user unknown
+Nov 07 11:45:51 kali sshd-session[1638]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:45:51 kali sshd-session[1638]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:45:53 kali sshd-session[1638]: Failed password for invalid user sitaram from 10.64.85.128 port 53287 ssh2
+Nov 07 11:46:17 kali sshd-session[1638]: pam_unix(sshd:auth): check pass; user unknown
+Nov 07 11:46:17 kali sshd-session[1638]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:46:17 kali sshd-session[1638]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:46:19 kali sshd-session[1638]: Failed password for invalid user sitaram from 10.64.85.128 port 53287 ssh2
+Nov 07 11:47:02 kali sshd[711]: Timeout before authentication for connection from 10.64.85.128 to 10.64.85.119, pid = 1638
+Nov 07 11:49:31 kali sshd-session[1660]: Accepted password for killerpk from 10.64.85.128 port 53376 ssh2
+Nov 07 11:49:31 kali sshd-session[1660]: pam_unix(sshd:session): session opened for user killerpk(uid=1000) by killerpk(uid=0)
+Nov 07 11:50:09 kali unix_chkpwd[1691]: password check failed for user (killerpk)
+Nov 07 11:50:09 kali sshd-session[1689]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.64.85.128  user=killerpk
+Nov 07 11:50:09 kali sshd-session[1689]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:50:09 kali sshd-session[1689]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:50:09 kali sshd-session[1689]: pam_winbind(sshd:auth): request wbcLogonUser failed: WBC_ERR_WINBIND_NOT_AVAILABLE, PAM error: PAM_AUTHINFO_UNAVAIL (9)!
+Nov 07 11:50:09 kali sshd-session[1689]: pam_winbind(sshd:auth): internal module error (retval = PAM_AUTHINFO_UNAVAIL(9), user = 'killerpk')
+Nov 07 11:50:11 kali sshd-session[1689]: Failed password for killerpk from 10.64.85.128 port 53394 ssh2
+Nov 07 11:50:19 kali unix_chkpwd[1694]: password check failed for user (killerpk)
+Nov 07 11:50:19 kali sshd-session[1689]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:50:19 kali sshd-session[1689]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:50:19 kali sshd-session[1689]: pam_winbind(sshd:auth): request wbcLogonUser failed: WBC_ERR_WINBIND_NOT_AVAILABLE, PAM error: PAM_AUTHINFO_UNAVAIL (9)!
+Nov 07 11:50:19 kali sshd-session[1689]: pam_winbind(sshd:auth): internal module error (retval = PAM_AUTHINFO_UNAVAIL(9), user = 'killerpk')
+Nov 07 11:50:20 kali sshd-session[1689]: Failed password for killerpk from 10.64.85.128 port 53394 ssh2
+Nov 07 11:50:26 kali unix_chkpwd[1695]: password check failed for user (killerpk)
+Nov 07 11:50:26 kali sshd-session[1689]: pam_winbind(sshd:auth): getting password (0x00000388)
+Nov 07 11:50:26 kali sshd-session[1689]: pam_winbind(sshd:auth): pam_get_item returned a password
+Nov 07 11:50:26 kali sshd-session[1689]: pam_winbind(sshd:auth): request wbcLogonUser failed: WBC_ERR_WINBIND_NOT_AVAILABLE, PAM error: PAM_AUTHINFO_UNAVAIL (9)!
+Nov 07 11:50:26 kali sshd-session[1689]: pam_winbind(sshd:auth): internal module error (retval = PAM_AUTHINFO_UNAVAIL(9), user = 'killerpk')
+Nov 07 11:50:28 kali sshd-session[1689]: Failed password for killerpk from 10.64.85.128 port 53394 ssh2
+Nov 07 11:50:31 kali sshd-session[1689]: Failed password for killerpk from 10.64.85.128 port 53394 ssh2
+Nov 07 11:51:04 kali sshd-session[1689]: Failed password for killerpk from 10.64.85.128 port 53394 ssh2
+Nov 07 11:51:14 kali sshd-session[1689]: Accepted password for killerpk from 10.64.85.128 port 53394 ssh2
+Nov 07 11:51:14 kali sshd-session[1689]: pam_unix(sshd:session): session opened for user killerpk(uid=1000) by killerpk(uid=0)
